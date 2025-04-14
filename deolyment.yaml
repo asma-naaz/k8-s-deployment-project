@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstdeployment
+  labels:
+    appname: testapp
+
+spec:
+  replicas: 3
+  selector:
+    matchExpressions:
+      - key: env
+        operator: In
+        values: 
+          - prod
+  template:
+    metadata: 
+      name: firstpod
+      labels:
+        env: prod
+    spec: 
+      containers: 
+      - name: firstcontainer 
+        image: nginx
+        env:
+          - name: myname
+
