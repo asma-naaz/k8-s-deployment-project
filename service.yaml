@@ -1,0 +1,12 @@
+apiversion: v1
+kind: service
+metadata:
+  name: firstservice
+  spec:
+    selector:
+      env: prod
+    ports:
+     - protocol: tcp
+       port: 80
+      targetport: 80
+    type: clusterIP
