@@ -41,7 +41,7 @@ Apply the deployment.yaml and service.yaml using kubectl apply -f <filename>.
 
 Scaling the deployment increases or decreases the number of pods running.
 
-kubectl scale deployment firstdeployment --replicas=5
+* kubectl scale deployment firstdeployment --replicas=5
 
 # Access the Application:
 
